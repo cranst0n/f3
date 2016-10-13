@@ -1,0 +1,100 @@
+
+.ui.main.menu {
+  z-index: 1000 !important;
+}
+
+.ui.main.menu > div > a, span {
+  background-color: #fff !important;
+}
+
+.ui.main.container {
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+.mobile-show-nav-btn {
+  color: #1EA83E !important;
+  background-color: #fff !important;
+}
+
+.mobile-show-nav-btn.active {
+  color: #fff !important;
+  background-color: #21BA45 !important;
+}
+
+.content-nav {
+  bottom: 0 !important;
+  padding-top: 45px;
+  padding-bottom: 60px;
+  overflow-y: auto;
+}
+
+.content-nav > .item.ui.accordion > .title {
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+}
+
+.content-nav > div.item.ui.accordion > .content > a {
+  font-size: 0.857em;
+  font-weight: 400;
+}
+
+.ui.dropdown .scrolling.menu, .ui.scrolling.dropdown .menu {
+  max-height: 15em !important;
+}
+
+.centered {
+  margin: auto !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+tr.stripe0 { background: #21BA45; color: white;}
+tr.stripe1 { background: hsla(0, 0.0%, 100.0%, 0.1); }
+
+tr.tier1 { background: hsla(135, 70.0%, 45.0%, 0.9); color: white; }
+tr.tier2 { background: hsla(105, 70.0%, 45.0%, 0.9); color: white; }
+tr.tier3 { background: hsla(50, 70.0%, 45.0%, 0.9); color: white; }
+tr.tier4 { background: hsla(25, 70.0%, 45.0%, 0.75); color: white; }
+tr.tier5 { background: hsla(360, 70.0%, 45.0%, 0.8); color: white; }
+tr.tier6 { background: hsla(360, 70.0%, 45.0%, 0.90); color: white; }
+tr.tier7 { background: hsla(360, 70.0%, 45.0%, 0.95); color: white; }
+tr.tier8 { background: hsla(360, 70.0%, 45.0%, 1.0); color: white; }
+tr.tier9 { background: hsla(360, 70.0%, 45.0%, 1.0); color: white; }
+tr.tier10 { background: hsla(360, 70.0%, 45.0%, 1.0); }
+
+@media all and (max-width: 960px) {
+  .large-screen-only {
+    display: none !important;
+  }
+
+  /* center all content inside main container on smaller screens */
+  .ui.main.container > * {
+    margin: auto !important;
+  }
+}
+
+@media all and (min-width: 960px) {
+  .small-screen-only {
+    display: none !important;
+  }
+
+  /* pull main content to left side of main container on larger screens */
+  .ui.main.container {
+    margin-left: 16.5em !important;
+  }
+}
+
+@media all and (max-width: 360px) {
+  .mini.hidden {
+    display: none !important;
+  }
+
+  /* hide plotly legends on mini displays */
+  g.legend {
+    display:  none !important;
+  }
+}

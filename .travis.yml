@@ -1,0 +1,26 @@
+
+language: scala
+
+scala:
+   - 2.11.8
+
+jdk:
+  - oraclejdk8
+
+script:
+  - sbt clean coverage test coverageReport coverageAggregate
+
+cache:
+  directories:
+  - $HOME/.sbt/0.13/dependency
+  - $HOME/.sbt/boot/scala*
+  - $HOME/.sbt/launchers
+  - $HOME/.ivy2/cache
+  - $HOME/.nvm
+
+before_cache:
+  - find $HOME/.sbt -name "*.lock" -type f -delete
+  - find $HOME/.ivy2/cache -name "ivydata-*.properties" -type f -delete
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

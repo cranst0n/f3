@@ -1,0 +1,10 @@
+
+### SBT ###
+local.sbt
+target/
+project/project
+project/target
+
+### SublimeText ###
+*.sublime*
+
